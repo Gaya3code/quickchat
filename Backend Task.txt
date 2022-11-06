@@ -1,0 +1,127 @@
+mysql>create database user;
+Database is changed
+mysql> use user;
+Database changed
+mysql>create table user(u_id int primary key,u_firstName varchar(100) not null,u_lastName varchar(100) not null,u_age int(5) not null,u_salary int(10));
+
+output:-
+
+mysql> desc user;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| u_id        | int          | NO   | PRI | NULL    |       |
+| u_firstName | varchar(100) | NO   |     | NULL    |       |
+| u_lastName  | varchar(100) | NO   |     | NULL    |       |
+| u_age       | int          | NO   |     | NULL    |       |
+| u_salary    | int          | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+mysql>create table movie1(m1_id int primary key,m1_movieName varchar(100) not null,m1_hero varchar(100) not null,m1_herione varchar(100) not null,m1_ticketPrice int(5) not null,m1_movieRating int(3) not null,u_id int, foreign key(u_id) references user(u_id));
+
+output:-
+
+mysql> desc movie1;
++----------------+--------------+------+-----+---------+-------+
+| Field          | Type         | Null | Key | Default | Extra |
++----------------+--------------+------+-----+---------+-------+
+| m1_id          | int          | NO   | PRI | NULL    |       |
+| m1_movieName   | varchar(100) | NO   |     | NULL    |       |
+| m1_hero        | varchar(100) | NO   |     | NULL    |       |
+| m1_herione     | varchar(100) | NO   |     | NULL    |       |
+| m1_ticketPrice | int          | NO   |     | NULL    |       |
+| m1_movieRating | int          | NO   |     | NULL    |       |
+| u_id           | int          | YES  | MUL | NULL    |       |
++----------------+--------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql>create table movie2(m2_id int primary key,m2_movieName varchar(100) not null,m2_hero varchar(100) not null,m2_herione varchar(100) not null,m2_ticketPrice int(5) not null,m2_movieRating int(3) not null,u_id int, foreign key(u_id) references user(u_id));
+
+output:-
+
+mysql> desc movie2;
++----------------+--------------+------+-----+---------+-------+
+| Field          | Type         | Null | Key | Default | Extra |
++----------------+--------------+------+-----+---------+-------+
+| m2_id          | int          | NO   | PRI | NULL    |       |
+| m2_movieName   | varchar(100) | NO   |     | NULL    |       |
+| m2_hero        | varchar(100) | NO   |     | NULL    |       |
+| m2_herione     | varchar(100) | NO   |     | NULL    |       |
+| m2_ticketPrice | int          | NO   |     | NULL    |       |
+| m2_movieRating | int          | NO   |     | NULL    |       |
+| u_id           | int          | YES  | MUL | NULL    |       |
++----------------+--------------+------+-----+---------+-------+
+7 rows in set (0.01 sec)
+
+mysql>create table movie3(m3_id int primary key,m3_movieName varchar(100) not null,m3_hero varchar(100) not null,m3_herione varchar(100) not null,m3_ticketPrice int(5) not null,m3_movieRating int(3) not null,u_id int, foreign key(u_id) references user(u_id));
+
+output:-
+
+mysql> desc movie3;
++----------------+--------------+------+-----+---------+-------+
+| Field          | Type         | Null | Key | Default | Extra |
++----------------+--------------+------+-----+---------+-------+
+| m3_id          | int          | NO   | PRI | NULL    |       |
+| m3_movieName   | varchar(100) | NO   |     | NULL    |       |
+| m3_hero        | varchar(100) | NO   |     | NULL    |       |
+| m3_herione     | varchar(100) | NO   |     | NULL    |       |
+| m3_ticketPrice | int          | NO   |     | NULL    |       |
+| m3_movieRating | int          | NO   |     | NULL    |       |
+| u_id           | int          | YES  | MUL | NULL    |       |
++----------------+--------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql>create table movie4(m4_id int primary key,m4_movieName varchar(100) not null,m4_hero varchar(100) not null,m4_herione varchar(100) not null,m4_ticketPrice int(5) not null,m4_movieRating int(3) not null,u_id int, foreign key(u_id) references user(u_id));
+
+output:-
+
+mysql> desc movie4;
++----------------+--------------+------+-----+---------+-------+
+| Field          | Type         | Null | Key | Default | Extra |
++----------------+--------------+------+-----+---------+-------+
+| m4_id          | int          | NO   | PRI | NULL    |       |
+| m4_movieName   | varchar(100) | NO   |     | NULL    |       |
+| m4_hero        | varchar(100) | NO   |     | NULL    |       |
+| m4_herione     | varchar(100) | NO   |     | NULL    |       |
+| m4_ticketPrice | int          | NO   |     | NULL    |       |
+| m4_movieRating | int          | NO   |     | NULL    |       |
+| u_id           | int          | YES  | MUL | NULL    |       |
++----------------+--------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql>create table movie5(m5_id int primary key,m5_movieName varchar(100) not null,m5_hero varchar(100) not null,m5_herione varchar(100) not null,m5_ticketPrice int(5) not null,m5_movieRating int(3) not null,u_id int, foreign key(u_id) references user(u_id));
+
+output:-
+
+mysql> desc movie5;
++----------------+--------------+------+-----+---------+-------+
+| Field          | Type         | Null | Key | Default | Extra |
++----------------+--------------+------+-----+---------+-------+
+| m5_id          | int          | NO   | PRI | NULL    |       |
+| m5_movieName   | varchar(100) | NO   |     | NULL    |       |
+| m5_hero        | varchar(100) | NO   |     | NULL    |       |
+| m5_herione     | varchar(100) | NO   |     | NULL    |       |
+| m5_ticketPrice | int          | NO   |     | NULL    |       |
+| m5_movieRating | int          | NO   |     | NULL    |       |
+| u_id           | int          | YES  | MUL | NULL    |       |
++----------------+--------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql>create table movie6(m6_id int primary key,m6_movieName varchar(100) not null,m6_hero varchar(100) not null,m6_herione varchar(100) not null,m6_ticketPrice int(5) not null,m6_movieRating int(3) not null,u_id int, foreign key(u_id) references user(u_id));
+
+output:-
+
+mysql> desc movie6;
++----------------+--------------+------+-----+---------+-------+
+| Field          | Type         | Null | Key | Default | Extra |
++----------------+--------------+------+-----+---------+-------+
+| m6_id          | int          | NO   | PRI | NULL    |       |
+| m6_movieName   | varchar(100) | NO   |     | NULL    |       |
+| m6_hero        | varchar(100) | NO   |     | NULL    |       |
+| m6_herione     | varchar(100) | NO   |     | NULL    |       |
+| m6_ticketPrice | int          | NO   |     | NULL    |       |
+| m6_movieRating | int          | NO   |     | NULL    |       |
+| u_id           | int          | YES  | MUL | NULL    |       |
++----------------+--------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
